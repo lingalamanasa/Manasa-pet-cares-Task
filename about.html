@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Stackly Pet Care - our mission, our team of experts, and our journey to becoming the most trusted pet care brand.">
+  <title>Stackly || About Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="navbar-brand">
+      <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+      <span class="brand-text">Stackly</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"><i class="bi bi-house-door"></i> Home</a></li>
+      <li><a href="about.html" class="active"><i class="bi bi-info-circle"></i> About</a></li>
+      <li><a href="shop.html"><i class="bi bi-bag"></i> Shop</a></li>
+      <li><a href="services.html"><i class="bi bi-gear"></i> Services</a></li>
+      <li><a href="blog.html"><i class="bi bi-journal-text"></i> Blog</a></li>
+      <li><a href="contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
+      <li class="profile-dropdown">
+        <button class="profile-btn" onclick="toggleDropdown()"><i class="bi bi-person-circle"></i></button>
+        <div class="dropdown-menu">
+          <a href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+          <a href="register.html"><i class="bi bi-person-plus"></i> Register</a>
+        </div>
+      </li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-overlay"></div>
+
+<!-- SECTION 1: HERO BANNER -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Our <span style="background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Story</span></h1>
+    <p>From a small neighborhood pet shop to a trusted pet care brand — discover the passion behind every product and service we offer.</p>
+  </div>
+</section>
+
+<!-- SECTION 2: OUR MISSION -->
+<section class="mission-section">
+  <div class="container">
+    <div class="mission-grid">
+      <div class="mission-content fade-up">
+        <div class="section-subtitle">Our Mission</div>
+        <h2>We Believe Every Pet Deserves the Best Care</h2>
+        <p>At Stackly, we're more than just a pet care company. We're a community of passionate animal lovers, veterinarians, and pet wellness experts who believe that every pet deserves premium care, regardless of breed or size.</p>
+        <p>Founded in 2019, we started with a simple belief: pets are family. By combining expert veterinary knowledge with the finest products sourced globally, we've built a brand that pet parents trust and veterinarians recommend.</p>
+        <a href="error.html" class="btn-primary" style="margin-top:20px">
+          <i class="bi bi-arrow-right"></i> Know More
+        </a>
+      </div>
+      <div class="mission-image fade-up">
+        <img src="images/pet-grooming.webp" alt="Our pet care facility">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: OUR TEAM -->
+<section class="team-section">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-subtitle">Meet The Team</div>
+      <h2 class="section-title">The Experts Behind Stackly Pet Care</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card fade-up">
+        <img src="images/team-1.webp" alt="Dr. Sarah Mitchell">
+        <div class="team-info">
+          <h4>Dr. Sarah Mitchell</h4>
+          <p>Chief Veterinarian</p>
+          <div class="team-socials">
+            <a href="error.html"><i class="bi bi-twitter-x"></i></a>
+            <a href="error.html"><i class="bi bi-instagram"></i></a>
+            <a href="error.html"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card fade-up">
+        <img src="images/team-2.webp" alt="James Cooper">
+        <div class="team-info">
+          <h4>James Cooper</h4>
+          <p>Head Pet Trainer</p>
+          <div class="team-socials">
+            <a href="error.html"><i class="bi bi-twitter-x"></i></a>
+            <a href="error.html"><i class="bi bi-instagram"></i></a>
+            <a href="error.html"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card fade-up">
+        <img src="images/team-3.webp" alt="Dr. Raj Patel">
+        <div class="team-info">
+          <h4>Dr. Raj Patel</h4>
+          <p>Veterinary Surgeon</p>
+          <div class="team-socials">
+            <a href="error.html"><i class="bi bi-twitter-x"></i></a>
+            <a href="error.html"><i class="bi bi-instagram"></i></a>
+            <a href="error.html"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card fade-up">
+        <img src="images/team-4.webp" alt="Emily Watson">
+        <div class="team-info">
+          <h4>Emily Watson</h4>
+          <p>Pet Nutritionist</p>
+          <div class="team-socials">
+            <a href="error.html"><i class="bi bi-twitter-x"></i></a>
+            <a href="error.html"><i class="bi bi-instagram"></i></a>
+            <a href="error.html"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: TIMELINE -->
+<section class="timeline-section">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-subtitle">Our Journey</div>
+      <h2 class="section-title">Milestones That Define Us</h2>
+    </div>
+    <div class="timeline fade-up">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <span class="year">2019</span>
+        <h4>The Beginning</h4>
+        <p>Stackly was born from a small pet shop with 3 passionate pet lovers and a dream to revolutionize pet care in India.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <span class="year">2020</span>
+        <h4>First 5,000 Happy Pets</h4>
+        <p>Within a year, we served our first 5,000 pets and expanded our product range to 100+ premium items.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <span class="year">2022</span>
+        <h4>Industry Recognition</h4>
+        <p>Awarded "Best Emerging Pet Care Brand" by the National Pet Care Association for excellence in pet wellness.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <span class="year">2023</span>
+        <h4>Nationwide Expansion</h4>
+        <p>Expanded to 15 cities across the country with over 50 expert veterinarians on our network.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <span class="year">2024</span>
+        <h4>Digital Revolution</h4>
+        <p>Launched our online platform with home delivery, tele-vet consultations, and subscription pet care plans.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: CTA -->
+<section class="cta-section">
+  <div class="container fade-up">
+    <h2>Ready to Give Your Pet the Best?</h2>
+    <p>Join thousands of pet parents who trust Stackly for their furry family's health and happiness.</p>
+    <a href="error.html" class="btn-primary">
+      <i class="bi bi-envelope"></i> Contact Us
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="navbar-brand">
+          <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+          <span class="brand-text">Stackly</span>
+        </a>
+        <p>Premium pet care products and services. Crafted with love for your furry family members.</p>
+        <div class="footer-socials">
+          <a href="error.html"><i class="bi bi-facebook"></i></a>
+          <a href="error.html"><i class="bi bi-twitter-x"></i></a>
+          <a href="error.html"><i class="bi bi-instagram"></i></a>
+          <a href="error.html"><i class="bi bi-linkedin"></i></a>
+          <a href="error.html"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul><li><a href="about.html">About Us</a></li><li><a href="error.html">Careers</a></li><li><a href="blog.html">Blog</a></li><li><a href="error.html">Press</a></li></ul>
+      </div>
+      <div class="footer-column">
+        <h4>Services</h4>
+        <ul><li><a href="services.html">Pet Grooming</a></li><li><a href="services.html">Vet Consultation</a></li><li><a href="services.html">Pet Training</a></li><li><a href="services.html">Pet Boarding</a></li></ul>
+      </div>
+      <div class="footer-column">
+        <h4>Support</h4>
+        <ul><li><a href="contact.html">Contact Us</a></li><li><a href="error.html">FAQ</a></li><li><a href="error.html">Privacy Policy</a></li><li><a href="error.html">Terms of Service</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Stackly Pet Care Industries. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

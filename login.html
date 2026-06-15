@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly || Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+<a href="index.html" class="back-home">
+  <i class="bi bi-arrow-left"></i> Back to Home
+</a>
+
+<div class="auth-container">
+  <div class="auth-card">
+    <div class="auth-icon">
+      <i class="bi bi-paw"></i>
+    </div>
+    <h2>Welcome Back</h2>
+    <p class="subtitle">Login to access your Stackly Pet Care dashboard</p>
+
+    <form class="auth-form" id="loginForm" onsubmit="handleLogin(event)">
+      <div class="form-group">
+        <label for="role">Login As</label>
+        <select id="role" required>
+          <option disabled selected>Select Role</option>
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="you@example.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="input-group">
+          <input type="password" id="password" placeholder="Enter your password" required>
+          <button type="button" class="toggle-pw" onclick="togglePassword('password')">
+            <i class="bi bi-eye"></i>
+          </button>
+        </div>
+      </div>
+
+      <button type="submit" class="auth-submit">
+        <i class="bi bi-box-arrow-in-right"></i> Login
+      </button>
+
+      <div class="auth-links">
+        <a href="error.html">Forgot Password?</a>
+        <a href="register.html" class="accent-link">Create Account</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+// Override login to capture full name
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var role = document.getElementById('role').value;
+  var fullname = document.getElementById('fullname').value.trim();
+  var email = document.getElementById('email').value;
+  var password = document.getElementById('password').value;
+
+  if (!role || role === 'Select Role') {
+    showAlert('Please select a role');
+    return;
+  }
+  if (!fullname) {
+    showAlert('Please enter your full name');
+    return;
+  }
+  if (!email) {
+    showAlert('Please enter your email');
+    return;
+  }
+  if (!password) {
+    showAlert('Please enter your password');
+    return;
+  }
+
+  // Store user info — use the full name directly
+  sessionStorage.setItem('userRole', role);
+  sessionStorage.setItem('userName', fullname);
+
+  if (role === 'admin') {
+    window.location.href = 'admin-dashboard.html';
+  } else {
+    window.location.href = 'user-dashboard.html';
+  }
+});
+</script>
+</body>
+</html>

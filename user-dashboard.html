@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly || User Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<div class="mobile-header">
+  <button class="sidebar-toggle" onclick="document.querySelector('.sidebar').classList.toggle('active')">
+    <i class="bi bi-list"></i>
+  </button>
+  <a href="index.html" class="mobile-brand">
+    <img src="images/logo.webp" alt="Stackly Logo" class="mobile-logo">
+    <span>Stackly</span>
+  </a>
+</div>
+
+<div class="dashboard">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <img src="images/logo.webp" alt="Stackly Logo">
+      <span>Stackly</span>
+    </div>
+    <ul class="sidebar-nav">
+      <li><a href="user-dashboard.html" class="active"><i class="bi bi-grid"></i> Dashboard</a></li>
+      <li><a href="error.html"><i class="bi bi-bag"></i> My Orders</a></li>
+      <li><a href="error.html"><i class="bi bi-paw"></i> My Pets</a></li>
+      <li><a href="error.html"><i class="bi bi-heart"></i> Favorites</a></li>
+      <li><a href="error.html"><i class="bi bi-star"></i> Reviews</a></li>
+      <li><a href="shop.html"><i class="bi bi-bag"></i> Browse Shop</a></li>
+      <li><a href="error.html"><i class="bi bi-person"></i> My Profile</a></li>
+      <li><a href="error.html"><i class="bi bi-gear"></i> Settings</a></li>
+    </ul>
+    <div class="sidebar-logout">
+      <button class="logout-btn" onclick="handleLogout()">
+        <i class="bi bi-box-arrow-left"></i> Logout
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="dashboard-main">
+    <!-- Welcome Banner -->
+    <div class="welcome-banner">
+      <h1>👋 Welcome back, <span id="userName">User</span>!</h1>
+      <p>Here's a quick overview of your pet care journey with Stackly.</p>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-row">
+      <div class="dash-stat-card">
+        <div class="stat-header">
+          <span class="stat-label">Total Orders</span>
+          <i class="bi bi-bag-check"></i>
+        </div>
+        <div class="stat-value">12</div>
+        <div class="stat-label">Last 30 days</div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="stat-header">
+          <span class="stat-label">Pets Registered</span>
+          <i class="bi bi-paw"></i>
+        </div>
+        <div class="stat-value">3</div>
+        <div class="stat-label">Active profiles</div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="stat-header">
+          <span class="stat-label">Reviews</span>
+          <i class="bi bi-star"></i>
+        </div>
+        <div class="stat-value">5</div>
+        <div class="stat-label">Given by you</div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="stat-header">
+          <span class="stat-label">Paw Points</span>
+          <i class="bi bi-gem"></i>
+        </div>
+        <div class="stat-value">320</div>
+        <div class="stat-label">Loyalty points</div>
+      </div>
+    </div>
+
+    <!-- Recent Orders -->
+    <div class="dash-section">
+      <h3><i class="bi bi-clock-history"></i> Recent Orders</h3>
+      <table class="dash-table">
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Items</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#STK-2089</td>
+            <td>Organic Dog Food, Puzzle Ball</td>
+            <td>Jun 12, 2024</td>
+            <td>₹1,798</td>
+            <td><span class="status-badge delivered"><i class="bi bi-check-circle"></i> Delivered</span></td>
+          </tr>
+          <tr>
+            <td>#STK-2087</td>
+            <td>Grooming Kit, Supplements</td>
+            <td>Jun 10, 2024</td>
+            <td>₹1,648</td>
+            <td><span class="status-badge delivered"><i class="bi bi-check-circle"></i> Delivered</span></td>
+          </tr>
+          <tr>
+            <td>#STK-2085</td>
+            <td>Luxury Pet Bed</td>
+            <td>Jun 8, 2024</td>
+            <td>₹1,799</td>
+            <td><span class="status-badge preparing"><i class="bi bi-hourglass-split"></i> Preparing</span></td>
+          </tr>
+          <tr>
+            <td>#STK-2082</td>
+            <td>Cat Food x3, Collar</td>
+            <td>Jun 5, 2024</td>
+            <td>₹1,696</td>
+            <td><span class="status-badge delivered"><i class="bi bi-check-circle"></i> Delivered</span></td>
+          </tr>
+          <tr>
+            <td>#STK-2079</td>
+            <td>Interactive Puzzle Ball x2</td>
+            <td>Jun 1, 2024</td>
+            <td>₹998</td>
+            <td><span class="status-badge delivered"><i class="bi bi-check-circle"></i> Delivered</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="dash-section">
+      <h3><i class="bi bi-lightning"></i> Quick Actions</h3>
+      <div class="quick-actions">
+        <a href="shop.html" class="action-card">
+          <i class="bi bi-bag"></i>
+          <span>Browse Shop</span>
+        </a>
+        <a href="error.html" class="action-card">
+          <i class="bi bi-paw"></i>
+          <span>My Pets</span>
+        </a>
+        <a href="error.html" class="action-card">
+          <i class="bi bi-gear"></i>
+          <span>Settings</span>
+        </a>
+        <a href="error.html" class="action-card">
+          <i class="bi bi-headset"></i>
+          <span>Get Support</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Two Column Layout -->
+    <div class="dash-two-col">
+      <!-- Active Offers -->
+      <div class="dash-section">
+        <h3><i class="bi bi-tag"></i> Active Offers</h3>
+        <div class="offers-list">
+          <div class="offer-card">
+            <div class="offer-badge">20% OFF</div>
+            <div class="offer-info">
+              <span class="offer-title">Weekend Special</span>
+              <span class="offer-desc">Get 20% off on all grooming products this weekend</span>
+              <span class="offer-expiry"><i class="bi bi-clock"></i> Expires in 2 days</span>
+            </div>
+          </div>
+          <div class="offer-card">
+            <div class="offer-badge">FREE</div>
+            <div class="offer-info">
+              <span class="offer-title">Free Pet Toy</span>
+              <span class="offer-desc">Free Puzzle Ball on orders above ₹1,499</span>
+              <span class="offer-expiry"><i class="bi bi-clock"></i> Expires in 5 days</span>
+            </div>
+          </div>
+          <div class="offer-card">
+            <div class="offer-badge">₹200</div>
+            <div class="offer-info">
+              <span class="offer-title">Flat ₹200 Off</span>
+              <span class="offer-desc">Use code PAWLOVE on your next order</span>
+              <span class="offer-expiry"><i class="bi bi-clock"></i> Expires in 10 days</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Delivery Tracking -->
+      <div class="dash-section">
+        <h3><i class="bi bi-truck"></i> Live Order Tracking</h3>
+        <div class="tracking-card">
+          <div class="tracking-header">
+            <span class="tracking-id">#STK-2090</span>
+            <span class="status-badge preparing"><i class="bi bi-hourglass-split"></i> In Progress</span>
+          </div>
+          <div class="tracking-items">Organic Dog Food, Leather Collar, Supplements</div>
+          <div class="tracking-timeline">
+            <div class="timeline-step completed">
+              <div class="timeline-dot"></div>
+              <div class="timeline-info">
+                <span class="timeline-title">Order Placed</span>
+                <span class="timeline-time">11:30 AM</span>
+              </div>
+            </div>
+            <div class="timeline-step completed">
+              <div class="timeline-dot"></div>
+              <div class="timeline-info">
+                <span class="timeline-title">Confirmed</span>
+                <span class="timeline-time">11:32 AM</span>
+              </div>
+            </div>
+            <div class="timeline-step active">
+              <div class="timeline-dot"></div>
+              <div class="timeline-info">
+                <span class="timeline-title">Packing</span>
+                <span class="timeline-time">11:45 AM</span>
+              </div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-dot"></div>
+              <div class="timeline-info">
+                <span class="timeline-title">Out for Delivery</span>
+                <span class="timeline-time">—</span>
+              </div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-dot"></div>
+              <div class="timeline-info">
+                <span class="timeline-title">Delivered</span>
+                <span class="timeline-time">—</span>
+              </div>
+            </div>
+          </div>
+          <div class="tracking-eta">
+            <i class="bi bi-clock"></i> Estimated delivery: <strong>2:30 PM</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Favorite Products -->
+    <div class="dash-section">
+      <h3><i class="bi bi-heart-fill"></i> Your Favorite Products</h3>
+      <div class="favorites-grid">
+        <div class="favorite-card">
+          <div class="favorite-img">
+            <img src="images/product-1.webp" alt="Organic Dog Food">
+            <button class="favorite-heart"><i class="bi bi-heart-fill"></i></button>
+          </div>
+          <div class="favorite-info">
+            <span class="favorite-name">Organic Premium Dog Food</span>
+            <div class="favorite-meta">
+              <span class="favorite-price">₹1,299</span>
+              <span class="favorite-rating"><i class="bi bi-star-fill"></i> 4.8</span>
+            </div>
+          </div>
+        </div>
+        <div class="favorite-card">
+          <div class="favorite-img">
+            <img src="images/product-5.webp" alt="Luxury Pet Bed">
+            <button class="favorite-heart"><i class="bi bi-heart-fill"></i></button>
+          </div>
+          <div class="favorite-info">
+            <span class="favorite-name">Luxury Donut Pet Bed</span>
+            <div class="favorite-meta">
+              <span class="favorite-price">₹1,799</span>
+              <span class="favorite-rating"><i class="bi bi-star-fill"></i> 4.9</span>
+            </div>
+          </div>
+        </div>
+        <div class="favorite-card">
+          <div class="favorite-img">
+            <img src="images/product-3.webp" alt="Cat Food">
+            <button class="favorite-heart"><i class="bi bi-heart-fill"></i></button>
+          </div>
+          <div class="favorite-info">
+            <span class="favorite-name">Gourmet Salmon Cat Food</span>
+            <div class="favorite-meta">
+              <span class="favorite-price">₹349</span>
+              <span class="favorite-rating"><i class="bi bi-star-fill"></i> 4.9</span>
+            </div>
+          </div>
+        </div>
+        <div class="favorite-card">
+          <div class="favorite-img">
+            <img src="images/product-4.webp" alt="Grooming Kit">
+            <button class="favorite-heart"><i class="bi bi-heart-fill"></i></button>
+          </div>
+          <div class="favorite-info">
+            <span class="favorite-name">Professional Grooming Kit</span>
+            <div class="favorite-meta">
+              <span class="favorite-price">₹899</span>
+              <span class="favorite-rating"><i class="bi bi-star-fill"></i> 4.7</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loyalty Rewards -->
+    <div class="dash-section">
+      <h3><i class="bi bi-gem"></i> Paw Points Rewards</h3>
+      <div class="loyalty-card">
+        <div class="loyalty-header">
+          <div class="loyalty-tier">
+            <i class="bi bi-trophy-fill"></i>
+            <div>
+              <span class="loyalty-tier-name">Gold Member</span>
+              <span class="loyalty-tier-desc">80 points to reach Platinum</span>
+            </div>
+          </div>
+          <div class="loyalty-points">
+            <span class="loyalty-points-value">320</span>
+            <span class="loyalty-points-label">Paw Points</span>
+          </div>
+        </div>
+        <div class="loyalty-progress">
+          <div class="loyalty-progress-bar" style="width: 80%;"></div>
+        </div>
+        <div class="loyalty-progress-labels">
+          <span>Gold — 200 pts</span>
+          <span>Platinum — 400 pts</span>
+        </div>
+        <div class="loyalty-perks">
+          <div class="perk-item">
+            <i class="bi bi-check-circle-fill"></i>
+            <span>Free delivery on all orders</span>
+          </div>
+          <div class="perk-item">
+            <i class="bi bi-check-circle-fill"></i>
+            <span>5% cashback on every purchase</span>
+          </div>
+          <div class="perk-item">
+            <i class="bi bi-check-circle-fill"></i>
+            <span>Priority customer support</span>
+          </div>
+          <div class="perk-item locked">
+            <i class="bi bi-lock-fill"></i>
+            <span>Early access to new products (Platinum)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+  // Load user name from session — shows exact name entered at login (e.g., Manasa, Arun, Manikanta)
+  var name = sessionStorage.getItem('userName') || 'User';
+  document.getElementById('userName').textContent = name;
+</script>
+</body>
+</html>

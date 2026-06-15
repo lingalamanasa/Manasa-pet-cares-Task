@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop premium pet food, toys, grooming supplies, and accessories at Stackly Pet Care. Quality products for dogs, cats, and exotic pets.">
+  <title>Stackly || Shop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="navbar-brand">
+      <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+      <span class="brand-text">Stackly</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"><i class="bi bi-house-door"></i> Home</a></li>
+      <li><a href="about.html"><i class="bi bi-info-circle"></i> About</a></li>
+      <li><a href="shop.html" class="active"><i class="bi bi-bag"></i> Shop</a></li>
+      <li><a href="services.html"><i class="bi bi-gear"></i> Services</a></li>
+      <li><a href="blog.html"><i class="bi bi-journal-text"></i> Blog</a></li>
+      <li><a href="contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
+      <li class="profile-dropdown">
+        <button class="profile-btn" onclick="toggleDropdown()"><i class="bi bi-person-circle"></i></button>
+        <div class="dropdown-menu">
+          <a href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+          <a href="register.html"><i class="bi bi-person-plus"></i> Register</a>
+        </div>
+      </li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-overlay"></div>
+
+<!-- SECTION 1: HERO -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Our <span style="background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Premium Products</span></h1>
+    <p>Discover handpicked pet supplies — from nutrition to accessories — all vet-approved and loved by pets.</p>
+  </div>
+</section>
+
+<!-- SECTION 2: FILTERS + PRODUCT GRID -->
+<section class="services-section">
+  <div class="container">
+    <div class="menu-filters fade-up">
+      <button class="menu-filter-btn active" onclick="filterProducts('all')">All</button>
+      <button class="menu-filter-btn" onclick="filterProducts('food')">Food</button>
+      <button class="menu-filter-btn" onclick="filterProducts('toys')">Toys</button>
+      <button class="menu-filter-btn" onclick="filterProducts('grooming')">Grooming</button>
+      <button class="menu-filter-btn" onclick="filterProducts('accessories')">Accessories</button>
+    </div>
+
+    <div class="menu-grid">
+      <div class="menu-card fade-up" data-category="food">
+        <div class="menu-card-img">
+          <img src="images/product-1.webp" alt="Organic Dog Food">
+          <span class="menu-card-badge">Best Seller</span>
+        </div>
+        <div class="menu-card-body">
+          <h4>Organic Premium Dog Food</h4>
+          <p>Grain-free, high-protein formula with real chicken and sweet potato for adult dogs.</p>
+          <div class="menu-card-tags">
+            <span class="menu-tag">Grain-Free</span>
+            <span class="menu-tag">All Breeds</span>
+          </div>
+          <div class="menu-card-footer">
+            <span class="menu-price">₹1,299</span>
+            <span class="menu-rating"><i class="bi bi-star-fill"></i> <span>4.8</span></span>
+          </div>
+          <button class="add-to-cart" onclick="window.location.href='error.html'"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="menu-card fade-up" data-category="toys">
+        <div class="menu-card-img">
+          <img src="images/product-2.webp" alt="Interactive Dog Toy">
+          <span class="menu-card-badge">Popular</span>
+        </div>
+        <div class="menu-card-body">
+          <h4>Interactive Puzzle Ball</h4>
+          <p>Durable rubber ball with treat-dispensing puzzles to keep your dog mentally stimulated.</p>
+          <div class="menu-card-tags">
+            <span class="menu-tag">Durable</span>
+            <span class="menu-tag">Interactive</span>
+          </div>
+          <div class="menu-card-footer">
+            <span class="menu-price">₹499</span>
+            <span class="menu-rating"><i class="bi bi-star-fill"></i> <span>4.6</span></span>
+          </div>
+          <button class="add-to-cart" onclick="window.location.href='error.html'"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="menu-card fade-up" data-category="food">
+        <div class="menu-card-img">
+          <img src="images/product-3.webp" alt="Gourmet Cat Food">
+          <span class="menu-card-badge">New</span>
+        </div>
+        <div class="menu-card-body">
+          <h4>Gourmet Salmon Cat Food</h4>
+          <p>Wild-caught salmon wet food with omega-3 fatty acids for a shiny coat and healthy skin.</p>
+          <div class="menu-card-tags">
+            <span class="menu-tag">Omega-3</span>
+            <span class="menu-tag">Wet Food</span>
+          </div>
+          <div class="menu-card-footer">
+            <span class="menu-price">₹349</span>
+            <span class="menu-rating"><i class="bi bi-star-fill"></i> <span>4.9</span></span>
+          </div>
+          <button class="add-to-cart" onclick="window.location.href='error.html'"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="menu-card fade-up" data-category="grooming">
+        <div class="menu-card-img">
+          <img src="images/product-4.webp" alt="Grooming Kit">
+        </div>
+        <div class="menu-card-body">
+          <h4>Professional Grooming Kit</h4>
+          <p>Complete grooming set with brush, comb, nail clippers, and organic pet shampoo.</p>
+          <div class="menu-card-tags">
+            <span class="menu-tag">Complete Set</span>
+            <span class="menu-tag">Organic</span>
+          </div>
+          <div class="menu-card-footer">
+            <span class="menu-price">₹899</span>
+            <span class="menu-rating"><i class="bi bi-star-fill"></i> <span>4.7</span></span>
+          </div>
+          <button class="add-to-cart" onclick="window.location.href='error.html'"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="menu-card fade-up" data-category="accessories">
+        <div class="menu-card-img">
+          <img src="images/product-5.webp" alt="Luxury Pet Bed">
+          <span class="menu-card-badge">Premium</span>
+        </div>
+        <div class="menu-card-body">
+          <h4>Luxury Donut Pet Bed</h4>
+          <p>Ultra-soft plush pet bed with anti-anxiety raised rim, machine-washable cover.</p>
+          <div class="menu-card-tags">
+            <span class="menu-tag">Anti-Anxiety</span>
+            <span class="menu-tag">Washable</span>
+          </div>
+          <div class="menu-card-footer">
+            <span class="menu-price">₹1,799</span>
+            <span class="menu-rating"><i class="bi bi-star-fill"></i> <span>4.9</span></span>
+          </div>
+          <button class="add-to-cart" onclick="window.location.href='error.html'"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="menu-card fade-up" data-category="accessories">
+        <div class="menu-card-img">
+          <img src="images/product-6.webp" alt="Leather Dog Collar">
+        </div>
+        <div class="menu-card-body">
+          <h4>Handcrafted Leather Collar</h4>
+          <p>Premium genuine leather collar with stainless steel buckle, available in multiple sizes.</p>
+          <div class="menu-card-tags">
+            <span class="menu-tag">Leather</span>
+            <span class="menu-tag">Adjustable</span>
+          </div>
+          <div class="menu-card-footer">
+            <span class="menu-price">₹649</span>
+            <span class="menu-rating"><i class="bi bi-star-fill"></i> <span>4.5</span></span>
+          </div>
+          <button class="add-to-cart" onclick="window.location.href='error.html'"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="menu-card fade-up" data-category="food">
+        <div class="menu-card-img">
+          <img src="images/product-7.webp" alt="Pet Supplements">
+          <span class="menu-card-badge">Vet Choice</span>
+        </div>
+        <div class="menu-card-body">
+          <h4>Multi-Vitamin Pet Supplements</h4>
+          <p>Daily multi-vitamin chews with glucosamine, probiotics, and essential nutrients.</p>
+          <div class="menu-card-tags">
+            <span class="menu-tag">Vitamins</span>
+            <span class="menu-tag">Joint Health</span>
+          </div>
+          <div class="menu-card-footer">
+            <span class="menu-price">₹749</span>
+            <span class="menu-rating"><i class="bi bi-star-fill"></i> <span>4.8</span></span>
+          </div>
+          <button class="add-to-cart" onclick="window.location.href='error.html'"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: TODAY'S PICKS -->
+<section class="picks-section">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-subtitle">Handpicked</div>
+      <h2 class="section-title">Today's Top Picks</h2>
+    </div>
+    <div class="picks-grid">
+      <div class="pick-card fade-up">
+        <img src="images/product-1.webp" alt="Organic Dog Food">
+        <div class="pick-info">
+          <h4>Organic Premium Dog Food</h4>
+          <p>Best seller — 342 orders this month</p>
+          <span class="pick-price">₹1,299</span>
+        </div>
+      </div>
+      <div class="pick-card fade-up">
+        <img src="images/product-5.webp" alt="Luxury Pet Bed">
+        <div class="pick-info">
+          <h4>Luxury Donut Pet Bed</h4>
+          <p>Trending — 198 orders this month</p>
+          <span class="pick-price">₹1,799</span>
+        </div>
+      </div>
+      <div class="pick-card fade-up">
+        <img src="images/product-3.webp" alt="Cat Food">
+        <div class="pick-info">
+          <h4>Gourmet Salmon Cat Food</h4>
+          <p>Cat favorite — 276 orders this month</p>
+          <span class="pick-price">₹349</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="navbar-brand">
+          <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+          <span class="brand-text">Stackly</span>
+        </a>
+        <p>Premium pet care products and services. Crafted with love for your furry family members.</p>
+        <div class="footer-socials">
+          <a href="error.html"><i class="bi bi-facebook"></i></a>
+          <a href="error.html"><i class="bi bi-twitter-x"></i></a>
+          <a href="error.html"><i class="bi bi-instagram"></i></a>
+          <a href="error.html"><i class="bi bi-linkedin"></i></a>
+          <a href="error.html"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-column"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="error.html">Careers</a></li><li><a href="blog.html">Blog</a></li><li><a href="error.html">Press</a></li></ul></div>
+      <div class="footer-column"><h4>Services</h4><ul><li><a href="services.html">Pet Grooming</a></li><li><a href="services.html">Vet Consultation</a></li><li><a href="services.html">Pet Training</a></li><li><a href="services.html">Pet Boarding</a></li></ul></div>
+      <div class="footer-column"><h4>Support</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="error.html">FAQ</a></li><li><a href="error.html">Privacy Policy</a></li><li><a href="error.html">Terms of Service</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2024 Stackly Pet Care Industries. All rights reserved.</p></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

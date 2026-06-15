@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stackly Pet Care Services - Professional grooming, vet consultation, pet boarding, training, dog walking, and nutrition plans.">
+  <title>Stackly || Services</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/services.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="navbar-brand"><img src="images/logo.webp" alt="Stackly Logo" class="logo-img"><span class="brand-text">Stackly</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"><i class="bi bi-house-door"></i> Home</a></li>
+      <li><a href="about.html"><i class="bi bi-info-circle"></i> About</a></li>
+      <li><a href="shop.html"><i class="bi bi-bag"></i> Shop</a></li>
+      <li><a href="services.html" class="active"><i class="bi bi-gear"></i> Services</a></li>
+      <li><a href="blog.html"><i class="bi bi-journal-text"></i> Blog</a></li>
+      <li><a href="contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
+      <li class="profile-dropdown"><button class="profile-btn" onclick="toggleDropdown()"><i class="bi bi-person-circle"></i></button><div class="dropdown-menu"><a href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a><a href="register.html"><i class="bi bi-person-plus"></i> Register</a></div></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-overlay"></div>
+
+<!-- SECTION 1: HERO -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Expert <span style="background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Pet Care Services</span></h1>
+    <p>Comprehensive pet care from grooming to veterinary consultations — everything your pet needs under one roof.</p>
+  </div>
+</section>
+
+<!-- SECTION 2: SERVICES DETAIL GRID -->
+<section class="services-detail-section">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-subtitle">What We Offer</div>
+      <h2 class="section-title">Our Specialties</h2>
+    </div>
+    <div class="services-detail-grid">
+      <div class="service-detail-card fade-up">
+        <div class="service-icon"><i class="bi bi-scissors"></i></div>
+        <h4>Pet Grooming & Spa</h4>
+        <p>Full-service grooming including bathing, breed-specific haircuts, nail trimming, ear cleaning, and relaxing spa treatments. Your pet leaves looking and feeling fabulous.</p>
+        <a href="error.html" class="learn-link">Book Now <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="service-detail-card fade-up">
+        <div class="service-icon"><i class="bi bi-clipboard2-pulse"></i></div>
+        <h4>Veterinary Care</h4>
+        <p>Expert veterinary consultations, diagnostics, vaccinations, dental care, and surgical services. Our team of certified vets ensures your pet's health comes first.</p>
+        <a href="error.html" class="learn-link">Book Now <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="service-detail-card fade-up">
+        <div class="service-icon"><i class="bi bi-house-door"></i></div>
+        <h4>Pet Boarding & Daycare</h4>
+        <p>Safe, comfortable boarding with 24/7 supervision, daily exercise, and personal attention. Daycare programs with socialization and enrichment activities.</p>
+        <a href="error.html" class="learn-link">Book Now <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="service-detail-card fade-up">
+        <div class="service-icon"><i class="bi bi-mortarboard"></i></div>
+        <h4>Training Programs</h4>
+        <p>Obedience training, puppy classes, behavior modification, and advanced trick training. Our certified trainers use positive reinforcement techniques.</p>
+        <a href="error.html" class="learn-link">Book Now <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="service-detail-card fade-up">
+        <div class="service-icon"><i class="bi bi-person-walking"></i></div>
+        <h4>Dog Walking</h4>
+        <p>Reliable, experienced dog walkers for daily walks. GPS-tracked walks, real-time photo updates, and flexible scheduling to fit your busy lifestyle.</p>
+        <a href="error.html" class="learn-link">Book Now <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="service-detail-card fade-up">
+        <div class="service-icon"><i class="bi bi-heart-pulse"></i></div>
+        <h4>Nutrition Consulting</h4>
+        <p>Personalized diet plans from certified pet nutritionists. Weight management, allergy-friendly diets, and supplements for optimal pet health.</p>
+        <a href="error.html" class="learn-link">Book Now <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: PRICING -->
+<section class="pricing-section">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-subtitle">Pricing</div>
+      <h2 class="section-title">Choose Your Plan</h2>
+      <p class="section-desc">Flexible plans designed to match your pet's needs and your budget.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card fade-up">
+        <h4>Basic Care</h4>
+        <div class="price">₹999</div>
+        <div class="price-period">per month</div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> Monthly health check-up</li>
+          <li><i class="bi bi-check-circle-fill"></i> Basic grooming (1x/month)</li>
+          <li><i class="bi bi-check-circle-fill"></i> 10% off products</li>
+          <li><i class="bi bi-check-circle-fill"></i> Email support</li>
+          <li class="disabled"><i class="bi bi-x-circle"></i> Home visits</li>
+          <li class="disabled"><i class="bi bi-x-circle"></i> Priority booking</li>
+        </ul>
+        <a href="error.html" class="btn-secondary" style="width:100%;justify-content:center">Get Started</a>
+      </div>
+      <div class="pricing-card featured fade-up">
+        <h4>Premium Care</h4>
+        <div class="price">₹2,499</div>
+        <div class="price-period">per month</div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> Bi-weekly health checks</li>
+          <li><i class="bi bi-check-circle-fill"></i> Full grooming (2x/month)</li>
+          <li><i class="bi bi-check-circle-fill"></i> 20% off products</li>
+          <li><i class="bi bi-check-circle-fill"></i> Phone & chat support</li>
+          <li><i class="bi bi-check-circle-fill"></i> Home visits included</li>
+          <li class="disabled"><i class="bi bi-x-circle"></i> Dedicated vet</li>
+        </ul>
+        <a href="error.html" class="btn-primary" style="width:100%;justify-content:center">Get Started</a>
+      </div>
+      <div class="pricing-card fade-up">
+        <h4>VIP Care</h4>
+        <div class="price">₹4,999</div>
+        <div class="price-period">per month</div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> Weekly health monitoring</li>
+          <li><i class="bi bi-check-circle-fill"></i> Unlimited grooming</li>
+          <li><i class="bi bi-check-circle-fill"></i> 30% off + free delivery</li>
+          <li><i class="bi bi-check-circle-fill"></i> 24/7 priority support</li>
+          <li><i class="bi bi-check-circle-fill"></i> Unlimited home visits</li>
+          <li><i class="bi bi-check-circle-fill"></i> Dedicated vet assigned</li>
+        </ul>
+        <a href="error.html" class="btn-secondary" style="width:100%;justify-content:center">Get Started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: HOW IT WORKS -->
+<section class="process-section">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-subtitle">Process</div>
+      <h2 class="section-title">How It Works</h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-step fade-up">
+        <div class="process-number">1</div>
+        <h4>Choose a Service</h4>
+        <p>Browse our services and select what your pet needs — from grooming to vet care.</p>
+      </div>
+      <div class="process-step fade-up">
+        <div class="process-number">2</div>
+        <h4>Book an Appointment</h4>
+        <p>Pick a convenient time slot online or call us to schedule your visit.</p>
+      </div>
+      <div class="process-step fade-up">
+        <div class="process-number">3</div>
+        <h4>Expert Care</h4>
+        <p>Our certified professionals provide personalized care for your furry friend.</p>
+      </div>
+      <div class="process-step fade-up">
+        <div class="process-number">4</div>
+        <h4>Happy Pet, Happy You</h4>
+        <p>Take home a healthier, happier pet with detailed care notes and follow-up plans.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-subtitle">FAQ</div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list fade-up">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">How do I book a grooming appointment? <i class="bi bi-chevron-down"></i></button>
+        <div class="faq-answer"><p>You can book a grooming appointment through our website by visiting the Contact page, or call us directly at +91 98765 43210. Walk-ins are also welcome based on availability.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">What vaccinations does my pet need? <i class="bi bi-chevron-down"></i></button>
+        <div class="faq-answer"><p>Vaccination requirements vary by pet type and age. Our veterinarians will create a personalized vaccination schedule during your pet's first visit. Common vaccinations include rabies, distemper, and parvovirus for dogs.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Do you offer emergency veterinary services? <i class="bi bi-chevron-down"></i></button>
+        <div class="faq-answer"><p>Yes, our Premium and VIP plan members have access to 24/7 emergency vet consultations via phone. For in-person emergencies, we partner with local emergency clinics for after-hours care.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Can I cancel or reschedule my appointment? <i class="bi bi-chevron-down"></i></button>
+        <div class="faq-answer"><p>Yes, you can cancel or reschedule appointments up to 24 hours before your scheduled time without any charge. Late cancellations may incur a 20% fee.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">What areas do you serve for home visits? <i class="bi bi-chevron-down"></i></button>
+        <div class="faq-answer"><p>We currently offer home visits within 15 km of our service centers in major cities. Premium and VIP members get priority scheduling and expanded coverage areas.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: CTA -->
+<section class="services-cta">
+  <div class="container fade-up">
+    <h2>Ready to Book a Service?</h2>
+    <p>Schedule your pet's next appointment today and give them the care they deserve.</p>
+    <a href="error.html" class="btn-primary"><i class="bi bi-calendar-check"></i> Book Now</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="navbar-brand"><img src="images/logo.webp" alt="Stackly Logo" class="logo-img"><span class="brand-text">Stackly</span></a><p>Premium pet care products and services. Crafted with love for your furry family members.</p><div class="footer-socials"><a href="error.html"><i class="bi bi-facebook"></i></a><a href="error.html"><i class="bi bi-twitter-x"></i></a><a href="error.html"><i class="bi bi-instagram"></i></a><a href="error.html"><i class="bi bi-linkedin"></i></a><a href="error.html"><i class="bi bi-youtube"></i></a></div></div>
+      <div class="footer-column"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="error.html">Careers</a></li><li><a href="blog.html">Blog</a></li><li><a href="error.html">Press</a></li></ul></div>
+      <div class="footer-column"><h4>Services</h4><ul><li><a href="services.html">Pet Grooming</a></li><li><a href="services.html">Vet Consultation</a></li><li><a href="services.html">Pet Training</a></li><li><a href="services.html">Pet Boarding</a></li></ul></div>
+      <div class="footer-column"><h4>Support</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="error.html">FAQ</a></li><li><a href="error.html">Privacy Policy</a></li><li><a href="error.html">Terms of Service</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2024 Stackly Pet Care Industries. All rights reserved.</p></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Stackly Pet Care - Get in touch with our team for pet care inquiries, appointments, and support.">
+  <title>Stackly || Contact Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="navbar-brand"><img src="images/logo.webp" alt="Stackly Logo" class="logo-img"><span class="brand-text">Stackly</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"><i class="bi bi-house-door"></i> Home</a></li>
+      <li><a href="about.html"><i class="bi bi-info-circle"></i> About</a></li>
+      <li><a href="shop.html"><i class="bi bi-bag"></i> Shop</a></li>
+      <li><a href="services.html"><i class="bi bi-gear"></i> Services</a></li>
+      <li><a href="blog.html"><i class="bi bi-journal-text"></i> Blog</a></li>
+      <li><a href="contact.html" class="active"><i class="bi bi-envelope"></i> Contact</a></li>
+      <li class="profile-dropdown"><button class="profile-btn" onclick="toggleDropdown()"><i class="bi bi-person-circle"></i></button><div class="dropdown-menu"><a href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a><a href="register.html"><i class="bi bi-person-plus"></i> Register</a></div></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-overlay"></div>
+
+<!-- SECTION 1: HERO -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Get In <span style="background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Touch</span></h1>
+    <p>Have a question or need assistance? We'd love to hear from you. Reach out to our friendly team anytime.</p>
+  </div>
+</section>
+
+<!-- SECTION 2: CONTACT INFO CARDS -->
+<section class="contact-info-section">
+  <div class="container">
+    <div class="contact-info-grid">
+      <div class="contact-info-card fade-up">
+        <i class="bi bi-envelope-fill"></i>
+        <h4>Email Us</h4>
+        <p>support@stacklypetcare.com<br>info@stacklypetcare.com</p>
+      </div>
+      <div class="contact-info-card fade-up">
+        <i class="bi bi-telephone-fill"></i>
+        <h4>Call Us</h4>
+        <p>+91 98765 43210<br>+91 87654 32109</p>
+      </div>
+      <div class="contact-info-card fade-up">
+        <i class="bi bi-geo-alt-fill"></i>
+        <h4>Visit Us</h4>
+        <p>42, MG Road, Banjara Hills<br>Hyderabad, TS - 500034</p>
+      </div>
+      <div class="contact-info-card fade-up">
+        <i class="bi bi-clock-fill"></i>
+        <h4>Working Hours</h4>
+        <p>Mon - Sat: 9:00 AM - 8:00 PM<br>Sunday: 10:00 AM - 5:00 PM</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: CONTACT FORM + MAP -->
+<section class="contact-form-section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-form fade-up">
+        <h3><i class="bi bi-chat-dots" style="color:var(--accent)"></i> Send Us a Message</h3>
+        <form onsubmit="handleContact(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-name">Full Name</label>
+              <input type="text" id="contact-name" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email Address</label>
+              <input type="email" id="contact-email" placeholder="you@example.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contact-subject">Subject</label>
+            <select id="contact-subject" required>
+              <option disabled selected>Select a subject</option>
+              <option>General Inquiry</option>
+              <option>Appointment Booking</option>
+              <option>Product Question</option>
+              <option>Grooming Services</option>
+              <option>Vet Consultation</option>
+              <option>Feedback / Complaint</option>
+              <option>Partnership Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" placeholder="Tell us how we can help..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit">
+            <i class="bi bi-send"></i> Send Message
+          </button>
+        </form>
+      </div>
+
+      <div class="map-section fade-up">
+        <h3><i class="bi bi-geo-alt"></i> Our Location</h3>
+        <div class="map-placeholder">
+          <i class="bi bi-map"></i>
+          <p>42, MG Road, Banjara Hills, Hyderabad</p>
+        </div>
+        <a href="error.html" class="map-link">Open in Google Maps <i class="bi bi-arrow-right"></i></a>
+
+        <div style="margin-top:30px">
+          <h3><i class="bi bi-clock"></i> Quick Contact</h3>
+          <div style="margin-top:16px">
+            <div style="display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--border-color)">
+              <i class="bi bi-whatsapp" style="color:var(--accent);font-size:1.2rem"></i>
+              <div>
+                <span style="font-size:0.85rem;color:var(--text-secondary)">WhatsApp</span><br>
+                <span style="font-size:0.9rem;font-weight:500">+91 98765 43210</span>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--border-color)">
+              <i class="bi bi-chat-dots" style="color:var(--accent);font-size:1.2rem"></i>
+              <div>
+                <span style="font-size:0.85rem;color:var(--text-secondary)">Live Chat</span><br>
+                <span style="font-size:0.9rem;font-weight:500">Available 9 AM - 8 PM</span>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;padding:12px 0">
+              <i class="bi bi-envelope" style="color:var(--accent);font-size:1.2rem"></i>
+              <div>
+                <span style="font-size:0.85rem;color:var(--text-secondary)">Response Time</span><br>
+                <span style="font-size:0.9rem;font-weight:500">Within 2 hours</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: SOCIAL CONNECTIONS -->
+<section class="social-section">
+  <div class="container fade-up">
+    <div class="section-subtitle">Follow Us</div>
+    <h2 class="section-title">Connect on Social Media</h2>
+    <p class="section-desc">Join our growing community of pet lovers for daily tips, adorable content, and exclusive updates.</p>
+    <div class="social-grid">
+      <a href="error.html" class="social-card"><i class="bi bi-facebook"></i> Facebook</a>
+      <a href="error.html" class="social-card"><i class="bi bi-instagram"></i> Instagram</a>
+      <a href="error.html" class="social-card"><i class="bi bi-twitter-x"></i> Twitter</a>
+      <a href="error.html" class="social-card"><i class="bi bi-youtube"></i> YouTube</a>
+      <a href="error.html" class="social-card"><i class="bi bi-linkedin"></i> LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="navbar-brand"><img src="images/logo.webp" alt="Stackly Logo" class="logo-img"><span class="brand-text">Stackly</span></a><p>Premium pet care products and services. Crafted with love for your furry family members.</p><div class="footer-socials"><a href="error.html"><i class="bi bi-facebook"></i></a><a href="error.html"><i class="bi bi-twitter-x"></i></a><a href="error.html"><i class="bi bi-instagram"></i></a><a href="error.html"><i class="bi bi-linkedin"></i></a><a href="error.html"><i class="bi bi-youtube"></i></a></div></div>
+      <div class="footer-column"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="error.html">Careers</a></li><li><a href="blog.html">Blog</a></li><li><a href="error.html">Press</a></li></ul></div>
+      <div class="footer-column"><h4>Services</h4><ul><li><a href="services.html">Pet Grooming</a></li><li><a href="services.html">Vet Consultation</a></li><li><a href="services.html">Pet Training</a></li><li><a href="services.html">Pet Boarding</a></li></ul></div>
+      <div class="footer-column"><h4>Support</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="error.html">FAQ</a></li><li><a href="error.html">Privacy Policy</a></li><li><a href="error.html">Terms of Service</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2024 Stackly Pet Care Industries. All rights reserved.</p></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stackly Pet Care - Premium pet care products and services. Shop food, toys, grooming supplies and expert vet care for your furry friends.">
+  <title>Stackly || Pet Care</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="navbar-brand">
+      <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+      <span class="brand-text">Stackly</span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active"><i class="bi bi-house-door"></i> Home</a></li>
+      <li><a href="about.html"><i class="bi bi-info-circle"></i> About</a></li>
+      <li><a href="shop.html"><i class="bi bi-bag"></i> Shop</a></li>
+      <li><a href="services.html"><i class="bi bi-gear"></i> Services</a></li>
+      <li><a href="blog.html"><i class="bi bi-journal-text"></i> Blog</a></li>
+      <li><a href="contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
+      <li class="profile-dropdown">
+        <button class="profile-btn" onclick="toggleDropdown()" aria-label="Profile menu">
+          <i class="bi bi-person-circle"></i>
+        </button>
+        <div class="dropdown-menu" id="profileDropdown">
+          <a href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+          <a href="register.html"><i class="bi bi-person-plus"></i> Register</a>
+        </div>
+      </li>
+    </ul>
+
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- ===== SECTION 1: HERO ===== -->
+<section class="hero-section" id="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="bi bi-star-fill"></i> Premium Pet Care
+        </div>
+        <h1 class="hero-title">
+          Happy Pets,<br><span>Happy Hearts</span>
+        </h1>
+        <p class="hero-text">
+          From premium nutrition to expert grooming, we bring your beloved pets the care they deserve. Quality products and trusted veterinary services — all under one roof.
+        </p>
+        <div class="hero-buttons">
+          <a href="error.html" class="btn-primary">
+            <i class="bi bi-bag"></i> Explore Shop
+          </a>
+          <a href="error.html" class="btn-secondary">
+            <i class="bi bi-play-circle"></i> Our Services
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/hero-pet.webp" alt="Happy pets - dog and cat together">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 2: STATS ===== -->
+<section class="stats-section" id="stats">
+  <div class="container">
+    <h2 class="stats-title">Trusted by <span>Pet Lovers Everywhere</span></h2>
+    <div class="stats-grid">
+      <div class="stat-card fade-up">
+        <div class="stat-icon"><i class="bi bi-heart-pulse"></i></div>
+        <div class="stat-number counter" data-target="10000" data-suffix="+">0</div>
+        <div class="stat-label">Happy Pets Served</div>
+      </div>
+      <div class="stat-card fade-up">
+        <div class="stat-icon"><i class="bi bi-box-seam"></i></div>
+        <div class="stat-number counter" data-target="200" data-suffix="+">0</div>
+        <div class="stat-label">Premium Products</div>
+      </div>
+      <div class="stat-card fade-up">
+        <div class="stat-icon"><i class="bi bi-shield-check"></i></div>
+        <div class="stat-number counter" data-target="50" data-suffix="+">0</div>
+        <div class="stat-label">Expert Veterinarians</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 3: WHY CHOOSE US (TABS) ===== -->
+<section class="why-section" id="why">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-subtitle">Why Stackly?</div>
+      <h2 class="section-title">Why Choose Our Pet Care</h2>
+      <p class="section-desc">We combine expert veterinary knowledge with premium products to deliver the best care for your furry companions.</p>
+    </div>
+
+    <div class="tab-buttons fade-up">
+      <button class="tab-btn active" data-tab="health" onclick="switchTab('health')">
+        <i class="bi bi-heart-pulse"></i> Health
+      </button>
+      <button class="tab-btn" data-tab="quality" onclick="switchTab('quality')">
+        <i class="bi bi-award"></i> Quality
+      </button>
+      <button class="tab-btn" data-tab="care" onclick="switchTab('care')">
+        <i class="bi bi-hand-thumbs-up"></i> Care
+      </button>
+    </div>
+
+    <div class="tab-content active" id="health">
+      <div class="feature-grid">
+        <div class="feature-card fade-up">
+          <div class="feature-icon"><i class="bi bi-clipboard2-pulse"></i></div>
+          <h4>Vet-Approved Products</h4>
+          <p>Every product in our store is reviewed and approved by certified veterinarians for safety.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-icon"><i class="bi bi-capsule"></i></div>
+          <h4>Nutritional Excellence</h4>
+          <p>Balanced, science-backed nutrition plans tailored to your pet's breed, age, and health needs.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-icon"><i class="bi bi-activity"></i></div>
+          <h4>Health Monitoring</h4>
+          <p>Regular wellness check-ups and preventive care programs to keep your pet in top shape.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-icon"><i class="bi bi-virus"></i></div>
+          <h4>Vaccination Programs</h4>
+          <p>Complete vaccination schedules and booster reminders for lifelong immunity.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="quality">
+      <div class="feature-grid">
+        <div class="feature-card fade-up">
+          <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
+          <h4>Certified Products</h4>
+          <p>All products meet international quality and safety standards for pet consumables.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-icon"><i class="bi bi-leaf"></i></div>
+          <h4>Natural Ingredients</h4>
+          <p>Organic, non-GMO ingredients sourced from trusted farms and suppliers worldwide.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-icon"><i class="bi bi-recycle"></i></div>
+          <h4>Eco-Friendly Packaging</h4>
+          <p>Sustainable packaging that's gentle on the planet, just like we are on your pets.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-icon"><i class="bi bi-patch-check"></i></div>
+          <h4>Quality Guarantee</h4>
+          <p>100% satisfaction guaranteed — if your pet doesn't love it, we'll make it right.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="care">
+      <div class="feature-grid">
+        <div class="feature-card fade-up">
+          <div class="feature-icon"><i class="bi bi-emoji-heart-eyes"></i></div>
+          <h4>Personalized Care</h4>
+          <p>Custom care plans designed around your pet's unique personality, preferences, and needs.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-icon"><i class="bi bi-telephone"></i></div>
+          <h4>24/7 Vet Support</h4>
+          <p>Round-the-clock access to veterinary advice for any health concerns or emergencies.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-icon"><i class="bi bi-house-heart"></i></div>
+          <h4>Home Visits</h4>
+          <p>Professional grooming and vet check-ups at your doorstep for maximum convenience.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-icon"><i class="bi bi-people"></i></div>
+          <h4>Community Support</h4>
+          <p>Join our community of pet lovers for tips, events, and exclusive member benefits.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 4: PLATFORM (In-Store / Delivery) ===== -->
+<section class="platform-section" id="platform">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-subtitle">Experience</div>
+      <h2 class="section-title">In-Store or Delivered to Your Door</h2>
+    </div>
+    <div class="platform-grid">
+      <div class="platform-card fade-up">
+        <img src="images/pet-store.webp" alt="Pet store experience">
+        <h3>Visit Our Store</h3>
+        <p>Step into our world of pet care. Browse hundreds of premium products, get expert advice, and let your pet try before you buy in our pet-friendly store.</p>
+        <a href="error.html" class="learn-link">Know More <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="platform-card fade-up">
+        <img src="images/pet-delivery.webp" alt="Pet supplies delivery">
+        <h3>Home Delivery</h3>
+        <p>Get premium pet supplies delivered right to your doorstep. Same-day delivery available on essentials. Carefully packaged with love for your furry family.</p>
+        <a href="error.html" class="learn-link">Know More <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 5: OUR SERVICES GRID ===== -->
+<section class="services-section" id="services">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-subtitle">Our Services</div>
+      <h2 class="section-title">Complete Pet Care Solutions</h2>
+      <p class="section-desc">From grooming to training, we offer comprehensive services to keep your pets healthy, happy, and well-cared for.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <div class="service-icon"><i class="bi bi-scissors"></i></div>
+        <h4>Pet Grooming</h4>
+        <p>Professional grooming services including bathing, haircuts, nail trimming, and spa treatments.</p>
+        <a href="error.html" class="learn-link">Learn More <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><i class="bi bi-clipboard2-pulse"></i></div>
+        <h4>Vet Consultation</h4>
+        <p>Expert veterinary care with regular check-ups, diagnostics, and treatment plans.</p>
+        <a href="error.html" class="learn-link">Learn More <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><i class="bi bi-house-door"></i></div>
+        <h4>Pet Boarding</h4>
+        <p>Safe, comfortable boarding facilities with 24/7 supervision while you're away.</p>
+        <a href="error.html" class="learn-link">Learn More <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><i class="bi bi-mortarboard"></i></div>
+        <h4>Pet Training</h4>
+        <p>Obedience training, behavior correction, and socialization programs by certified trainers.</p>
+        <a href="error.html" class="learn-link">Learn More <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><i class="bi bi-person-walking"></i></div>
+        <h4>Dog Walking</h4>
+        <p>Scheduled dog walking services by trusted, experienced handlers in your neighborhood.</p>
+        <a href="error.html" class="learn-link">Learn More <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><i class="bi bi-heart-pulse"></i></div>
+        <h4>Pet Nutrition</h4>
+        <p>Customized diet plans and premium nutrition advice from certified pet nutritionists.</p>
+        <a href="error.html" class="learn-link">Learn More <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 6: SMALL BUSINESS ===== -->
+<section class="small-biz-section" id="small-biz">
+  <div class="container">
+    <div class="small-biz-grid">
+      <div class="small-biz-content fade-up">
+        <div class="section-subtitle">For Pet Shops & Clinics</div>
+        <h2>Built for Pet Care Businesses</h2>
+        <p>Whether you run a small pet shop or a busy veterinary clinic, Stackly provides the tools and products to elevate your pet care services.</p>
+        <ul class="biz-features">
+          <li><i class="bi bi-check-circle-fill"></i> Wholesale product ordering system</li>
+          <li><i class="bi bi-check-circle-fill"></i> Inventory management tools</li>
+          <li><i class="bi bi-check-circle-fill"></i> Affordable bulk pricing</li>
+          <li><i class="bi bi-check-circle-fill"></i> Appointment scheduling system</li>
+          <li><i class="bi bi-check-circle-fill"></i> 24/7 veterinary support network</li>
+        </ul>
+        <a href="services.html" class="btn-primary" style="margin-top: 24px;">
+          <i class="bi bi-arrow-right"></i> Know More
+        </a>
+      </div>
+      <div class="small-biz-image fade-up">
+        <img src="images/pet-grooming.webp" alt="Pet grooming salon">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 7: SPOTLIGHT ===== -->
+<section class="spotlight-section" id="spotlight">
+  <div class="container">
+    <div class="spotlight-grid">
+      <div class="spotlight-image fade-up">
+        <img src="images/spotlight-pet.webp" alt="Premium pet care products">
+      </div>
+      <div class="spotlight-content fade-up">
+        <div class="section-subtitle">Premium Collection</div>
+        <h2 class="section-title" style="text-align:left">Premium Care for Your Furry Friends</h2>
+        <ul class="spotlight-list">
+          <li>
+            <i class="bi bi-shield-check"></i>
+            <div>
+              <h4>Veterinarian Formulated</h4>
+              <p>Every product is developed in partnership with certified vets to ensure optimal pet health.</p>
+            </div>
+          </li>
+          <li>
+            <i class="bi bi-leaf"></i>
+            <div>
+              <h4>All-Natural Ingredients</h4>
+              <p>No artificial fillers, preservatives, or chemicals — only what nature intended for your pet.</p>
+            </div>
+          </li>
+          <li>
+            <i class="bi bi-award"></i>
+            <div>
+              <h4>Award-Winning Formulas</h4>
+              <p>Recognized by pet industry experts for innovation in pet nutrition and care products.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 8: SOLUTIONS GRID ===== -->
+<section class="solutions-section" id="solutions">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-subtitle">Explore</div>
+      <h2 class="section-title">Something for Every Pet</h2>
+    </div>
+    <div class="solutions-grid">
+      <div class="solution-card fade-up">
+        <i class="bi bi-emoji-smile"></i>
+        <h4>Puppies & Kittens</h4>
+        <p>Specially formulated nutrition, teething toys, and essential starter kits for your new baby pet.</p>
+        <a href="error.html" class="learn-link">Learn More <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="solution-card fade-up">
+        <i class="bi bi-heart"></i>
+        <h4>Adult Pets</h4>
+        <p>Balanced maintenance diets, enrichment toys, and health supplements for prime-age pets.</p>
+        <a href="error.html" class="learn-link">Learn More <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="solution-card fade-up">
+        <i class="bi bi-star"></i>
+        <h4>Senior Pets</h4>
+        <p>Gentle nutrition, joint support supplements, and comfort products for aging companions.</p>
+        <a href="error.html" class="learn-link">Learn More <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="solution-card fade-up">
+        <i class="bi bi-gem"></i>
+        <h4>Exotic Pets</h4>
+        <p>Specialized care products for birds, reptiles, fish, and other exotic companion animals.</p>
+        <a href="error.html" class="learn-link">Learn More <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="navbar-brand">
+          <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+          <span class="brand-text">Stackly</span>
+        </a>
+        <p>Premium pet care products and services. Crafted with love for your furry family members.</p>
+        <div class="footer-socials">
+          <a href="error.html" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="error.html" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="error.html" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="error.html" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="error.html" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="error.html">Careers</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="error.html">Press</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Pet Grooming</a></li>
+          <li><a href="services.html">Vet Consultation</a></li>
+          <li><a href="services.html">Pet Training</a></li>
+          <li><a href="services.html">Pet Boarding</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="error.html">FAQ</a></li>
+          <li><a href="error.html">Privacy Policy</a></li>
+          <li><a href="error.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Stackly Pet Care Industries. All rights reserved. Designed with <i class="bi bi-heart-fill" style="color:var(--accent)"></i> by Stackly</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

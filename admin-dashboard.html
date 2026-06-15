@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly || Admin Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<div class="mobile-header">
+  <button class="sidebar-toggle" onclick="document.querySelector('.sidebar').classList.toggle('active')">
+    <i class="bi bi-list"></i>
+  </button>
+  <a href="index.html" class="mobile-brand">
+    <img src="images/logo.webp" alt="Stackly Logo" class="mobile-logo">
+    <span>Stackly</span>
+  </a>
+</div>
+
+<div class="dashboard">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <img src="images/logo.webp" alt="Stackly Logo">
+      <span>Stackly</span>
+    </div>
+    <ul class="sidebar-nav">
+      <li><a href="admin-dashboard.html" class="active"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+      <li><a href="error.html"><i class="bi bi-bag"></i> All Orders</a></li>
+      <li><a href="error.html"><i class="bi bi-box-seam"></i> Manage Products</a></li>
+      <li><a href="error.html"><i class="bi bi-people"></i> Manage Users</a></li>
+      <li><a href="error.html"><i class="bi bi-graph-up"></i> Analytics</a></li>
+      <li><a href="error.html"><i class="bi bi-bar-chart"></i> Reports</a></li>
+      <li><a href="error.html"><i class="bi bi-megaphone"></i> Marketing</a></li>
+      <li><a href="error.html"><i class="bi bi-gear"></i> Settings</a></li>
+    </ul>
+    <div class="sidebar-logout">
+      <button class="logout-btn" onclick="handleLogout()">
+        <i class="bi bi-box-arrow-left"></i> Logout
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="dashboard-main">
+    <!-- Welcome Banner -->
+    <div class="welcome-banner">
+      <h1>🛡️ Welcome back, <span id="adminName">Admin</span>!</h1>
+      <p>Monitor orders, manage products, and keep your pet care business running smoothly.</p>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-row">
+      <div class="dash-stat-card">
+        <div class="stat-header">
+          <span class="stat-label">Total Orders</span>
+          <i class="bi bi-bag-check"></i>
+        </div>
+        <div class="stat-value">256</div>
+        <div class="stat-label">This month</div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="stat-header">
+          <span class="stat-label">Active Users</span>
+          <i class="bi bi-people"></i>
+        </div>
+        <div class="stat-value">1.2K</div>
+        <div class="stat-label">Registered users</div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="stat-header">
+          <span class="stat-label">Revenue</span>
+          <i class="bi bi-currency-rupee"></i>
+        </div>
+        <div class="stat-value">₹85K</div>
+        <div class="stat-label">This month</div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="stat-header">
+          <span class="stat-label">Products</span>
+          <i class="bi bi-box-seam"></i>
+        </div>
+        <div class="stat-value">142</div>
+        <div class="stat-label">Active items</div>
+      </div>
+    </div>
+
+    <!-- Recent Orders -->
+    <div class="dash-section">
+      <h3><i class="bi bi-clock-history"></i> Recent Orders</h3>
+      <table class="dash-table">
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Items</th>
+            <th>Amount</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#STK-2089</td>
+            <td>Manasa Lingala</td>
+            <td>Organic Dog Food, Puzzle Ball</td>
+            <td>₹1,798</td>
+            <td><span class="status-badge delivered"><i class="bi bi-check-circle"></i> Delivered</span></td>
+          </tr>
+          <tr>
+            <td>#STK-2088</td>
+            <td>Arun Kumar</td>
+            <td>Luxury Pet Bed x1</td>
+            <td>₹1,799</td>
+            <td><span class="status-badge preparing"><i class="bi bi-hourglass-split"></i> Preparing</span></td>
+          </tr>
+          <tr>
+            <td>#STK-2087</td>
+            <td>Manikanta Reddy</td>
+            <td>Grooming Kit, Cat Food</td>
+            <td>₹1,248</td>
+            <td><span class="status-badge pending"><i class="bi bi-clock"></i> Pending</span></td>
+          </tr>
+          <tr>
+            <td>#STK-2086</td>
+            <td>Priya Sharma</td>
+            <td>Leather Collar, Supplements</td>
+            <td>₹1,398</td>
+            <td><span class="status-badge delivered"><i class="bi bi-check-circle"></i> Delivered</span></td>
+          </tr>
+          <tr>
+            <td>#STK-2085</td>
+            <td>Rahul Nair</td>
+            <td>Cat Food x3</td>
+            <td>₹1,047</td>
+            <td><span class="status-badge cancelled"><i class="bi bi-x-circle"></i> Cancelled</span></td>
+          </tr>
+          <tr>
+            <td>#STK-2084</td>
+            <td>Sneha Desai</td>
+            <td>Dog Food, Bed, Collar</td>
+            <td>₹3,747</td>
+            <td><span class="status-badge delivered"><i class="bi bi-check-circle"></i> Delivered</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="dash-section">
+      <h3><i class="bi bi-lightning"></i> Quick Actions</h3>
+      <div class="quick-actions">
+        <a href="error.html" class="action-card">
+          <i class="bi bi-plus-circle"></i>
+          <span>Add Product</span>
+        </a>
+        <a href="error.html" class="action-card">
+          <i class="bi bi-people"></i>
+          <span>Manage Users</span>
+        </a>
+        <a href="error.html" class="action-card">
+          <i class="bi bi-bar-chart"></i>
+          <span>View Reports</span>
+        </a>
+        <a href="error.html" class="action-card">
+          <i class="bi bi-megaphone"></i>
+          <span>Create Promo</span>
+        </a>
+        <a href="error.html" class="action-card">
+          <i class="bi bi-gear"></i>
+          <span>Settings</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Two Column Layout -->
+    <div class="dash-two-col">
+      <!-- Top Selling Products -->
+      <div class="dash-section">
+        <h3><i class="bi bi-fire"></i> Top Selling Products</h3>
+        <div class="top-items-list">
+          <div class="top-item">
+            <div class="top-item-rank">#1</div>
+            <div class="top-item-info">
+              <span class="top-item-name">Organic Premium Dog Food</span>
+              <span class="top-item-meta">342 orders this month</span>
+            </div>
+            <div class="top-item-revenue">₹4,44,258</div>
+          </div>
+          <div class="top-item">
+            <div class="top-item-rank">#2</div>
+            <div class="top-item-info">
+              <span class="top-item-name">Luxury Donut Pet Bed</span>
+              <span class="top-item-meta">289 orders this month</span>
+            </div>
+            <div class="top-item-revenue">₹5,19,911</div>
+          </div>
+          <div class="top-item">
+            <div class="top-item-rank">#3</div>
+            <div class="top-item-info">
+              <span class="top-item-name">Gourmet Salmon Cat Food</span>
+              <span class="top-item-meta">276 orders this month</span>
+            </div>
+            <div class="top-item-revenue">₹96,324</div>
+          </div>
+          <div class="top-item">
+            <div class="top-item-rank">#4</div>
+            <div class="top-item-info">
+              <span class="top-item-name">Professional Grooming Kit</span>
+              <span class="top-item-meta">198 orders this month</span>
+            </div>
+            <div class="top-item-revenue">₹1,78,002</div>
+          </div>
+          <div class="top-item">
+            <div class="top-item-rank">#5</div>
+            <div class="top-item-info">
+              <span class="top-item-name">Multi-Vitamin Supplements</span>
+              <span class="top-item-meta">176 orders this month</span>
+            </div>
+            <div class="top-item-revenue">₹1,31,824</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weekly Revenue -->
+      <div class="dash-section">
+        <h3><i class="bi bi-graph-up-arrow"></i> Weekly Revenue</h3>
+        <div class="chart-container">
+          <div class="chart-bar-group">
+            <div class="chart-bar" style="height: 55%;">
+              <span class="chart-tooltip">₹12.2K</span>
+            </div>
+            <span class="chart-label">Mon</span>
+          </div>
+          <div class="chart-bar-group">
+            <div class="chart-bar" style="height: 70%;">
+              <span class="chart-tooltip">₹15.8K</span>
+            </div>
+            <span class="chart-label">Tue</span>
+          </div>
+          <div class="chart-bar-group">
+            <div class="chart-bar" style="height: 45%;">
+              <span class="chart-tooltip">₹10.3K</span>
+            </div>
+            <span class="chart-label">Wed</span>
+          </div>
+          <div class="chart-bar-group">
+            <div class="chart-bar" style="height: 80%;">
+              <span class="chart-tooltip">₹18.9K</span>
+            </div>
+            <span class="chart-label">Thu</span>
+          </div>
+          <div class="chart-bar-group">
+            <div class="chart-bar" style="height: 95%;">
+              <span class="chart-tooltip">₹22.4K</span>
+            </div>
+            <span class="chart-label">Fri</span>
+          </div>
+          <div class="chart-bar-group">
+            <div class="chart-bar highlight" style="height: 100%;">
+              <span class="chart-tooltip">₹24.1K</span>
+            </div>
+            <span class="chart-label">Sat</span>
+          </div>
+          <div class="chart-bar-group">
+            <div class="chart-bar" style="height: 85%;">
+              <span class="chart-tooltip">₹19.5K</span>
+            </div>
+            <span class="chart-label">Sun</span>
+          </div>
+        </div>
+        <div class="chart-summary">
+          <div class="chart-summary-item">
+            <span class="chart-summary-label">Total This Week</span>
+            <span class="chart-summary-value">₹1,23,200</span>
+          </div>
+          <div class="chart-summary-item">
+            <span class="chart-summary-label">vs Last Week</span>
+            <span class="chart-summary-value positive">+15.3%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Staff Overview -->
+    <div class="dash-section">
+      <h3><i class="bi bi-person-badge"></i> Staff Overview</h3>
+      <div class="staff-grid">
+        <div class="staff-card">
+          <div class="staff-avatar"><i class="bi bi-person-fill"></i></div>
+          <div class="staff-info">
+            <span class="staff-name">Dr. Sarah Mitchell</span>
+            <span class="staff-role">Chief Veterinarian</span>
+          </div>
+          <span class="status-badge delivered"><i class="bi bi-circle-fill"></i> On Duty</span>
+        </div>
+        <div class="staff-card">
+          <div class="staff-avatar"><i class="bi bi-person-fill"></i></div>
+          <div class="staff-info">
+            <span class="staff-name">James Cooper</span>
+            <span class="staff-role">Head Pet Trainer</span>
+          </div>
+          <span class="status-badge delivered"><i class="bi bi-circle-fill"></i> On Duty</span>
+        </div>
+        <div class="staff-card">
+          <div class="staff-avatar"><i class="bi bi-person-fill"></i></div>
+          <div class="staff-info">
+            <span class="staff-name">Dr. Raj Patel</span>
+            <span class="staff-role">Veterinary Surgeon</span>
+          </div>
+          <span class="status-badge preparing"><i class="bi bi-circle-fill"></i> Break</span>
+        </div>
+        <div class="staff-card">
+          <div class="staff-avatar"><i class="bi bi-person-fill"></i></div>
+          <div class="staff-info">
+            <span class="staff-name">Emily Watson</span>
+            <span class="staff-role">Pet Nutritionist</span>
+          </div>
+          <span class="status-badge delivered"><i class="bi bi-circle-fill"></i> On Duty</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inventory Alerts -->
+    <div class="dash-section">
+      <h3><i class="bi bi-exclamation-triangle"></i> Inventory Alerts</h3>
+      <div class="alert-list">
+        <div class="alert-item critical">
+          <div class="alert-icon"><i class="bi bi-exclamation-circle-fill"></i></div>
+          <div class="alert-info">
+            <span class="alert-title">Organic Dog Food (Chicken) — Out of Stock</span>
+            <span class="alert-desc">Last restocked 3 days ago. 5 pending orders affected.</span>
+          </div>
+          <a href="error.html" class="alert-action">Reorder</a>
+        </div>
+        <div class="alert-item warning">
+          <div class="alert-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
+          <div class="alert-info">
+            <span class="alert-title">Grooming Shampoo — Low Stock (8 units)</span>
+            <span class="alert-desc">Expected to run out by tomorrow evening.</span>
+          </div>
+          <a href="error.html" class="alert-action">Reorder</a>
+        </div>
+        <div class="alert-item warning">
+          <div class="alert-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
+          <div class="alert-info">
+            <span class="alert-title">Leather Collar (Medium) — Low Stock (5 units)</span>
+            <span class="alert-desc">Popular item. Restock recommended before weekend.</span>
+          </div>
+          <a href="error.html" class="alert-action">Reorder</a>
+        </div>
+        <div class="alert-item info">
+          <div class="alert-icon"><i class="bi bi-info-circle-fill"></i></div>
+          <div class="alert-info">
+            <span class="alert-title">Cat Food (Salmon) — Restocked</span>
+            <span class="alert-desc">200 units received today from PetNutra Suppliers.</span>
+          </div>
+          <span class="alert-action done">Done</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Customer Reviews -->
+    <div class="dash-section">
+      <h3><i class="bi bi-chat-quote"></i> Latest Customer Reviews</h3>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-user">
+              <div class="review-avatar">ML</div>
+              <div>
+                <span class="review-name">Manasa Lingala</span>
+                <span class="review-date">2 hours ago</span>
+              </div>
+            </div>
+            <div class="review-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+          </div>
+          <p class="review-text">"My golden retriever absolutely loves the organic food! His coat is shinier than ever. Best pet food brand we've tried."</p>
+          <span class="review-dish"><i class="bi bi-box-seam"></i> Organic Premium Dog Food</span>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-user">
+              <div class="review-avatar">AK</div>
+              <div>
+                <span class="review-name">Arun Kumar</span>
+                <span class="review-date">5 hours ago</span>
+              </div>
+            </div>
+            <div class="review-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+            </div>
+          </div>
+          <p class="review-text">"The luxury pet bed is amazing! My cat sleeps on it all day. Could be slightly bigger for larger breeds though."</p>
+          <span class="review-dish"><i class="bi bi-box-seam"></i> Luxury Donut Pet Bed</span>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-user">
+              <div class="review-avatar">MR</div>
+              <div>
+                <span class="review-name">Manikanta Reddy</span>
+                <span class="review-date">1 day ago</span>
+              </div>
+            </div>
+            <div class="review-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+          </div>
+          <p class="review-text">"The grooming kit is professional quality! My poodle looks like she just came from a salon. Highly recommend!"</p>
+          <span class="review-dish"><i class="bi bi-box-seam"></i> Professional Grooming Kit</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+  // Load admin name from session — shows exact name entered at login
+  var name = sessionStorage.getItem('userName') || 'Admin';
+  document.getElementById('adminName').textContent = name;
+</script>
+</body>
+</html>
