@@ -201,9 +201,17 @@ function handleRegister(e) {
     return;
   }
 
-  showAlert('Account created successfully! Redirecting to login...');
+  // Store user info in sessionStorage so they are logged in immediately
+  sessionStorage.setItem('userRole', role);
+  sessionStorage.setItem('userName', name);
+
+  showAlert('Account created successfully! Redirecting to dashboard...');
   setTimeout(function() {
-    window.location.href = 'login.html';
+    if (role === 'admin') {
+      window.location.href = 'admin-dashboard.html';
+    } else {
+      window.location.href = 'user-dashboard.html';
+    }
   }, 1500);
 }
 
