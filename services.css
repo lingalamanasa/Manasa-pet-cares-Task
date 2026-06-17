@@ -13,11 +13,56 @@
 }
 
 .service-detail-card {
-  padding: 35px;
+  padding: 0;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   transition: var(--transition);
+  overflow: hidden;
+}
+
+.service-card-img {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.service-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.service-detail-card:hover .service-card-img img {
+  transform: scale(1.05);
+}
+
+.service-detail-card .service-icon,
+.service-detail-card h4,
+.service-detail-card p,
+.service-detail-card .learn-link {
+  margin-left: 28px;
+  margin-right: 28px;
+}
+
+.service-detail-card .service-icon {
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.service-detail-card h4 {
+  margin-bottom: 10px;
+}
+
+.service-detail-card p {
+  margin-bottom: 16px;
+}
+
+.service-detail-card .learn-link {
+  display: inline-flex;
+  margin-bottom: 28px;
 }
 
 .service-detail-card:hover {
