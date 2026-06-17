@@ -4,8 +4,8 @@ A comprehensive and responsive pet care website featuring a modern dashboard, sh
 
 ## Links
 
-- **Live Website**: [https://lingalamanasa.github.io/Manasa-pet-cares-Task/](https://lingalamanasa.github.io/Manasa-pet-cares-Task/)
-- **GitHub Repository**: [https://github.com/lingalamanasa/Manasa-pet-cares-Task](https://github.com/lingalamanasa/Manasa-pet-cares-Task)
+- **Live Website**: [Stackly Pet Care Live Demo](https://lingalamanasa.github.io/Manasa-pet-cares-Task/)
+- **GitHub Repository**: [Manasa-pet-cares-Task Source Code](https://github.com/lingalamanasa/Manasa-pet-cares-Task)
 
 ## Features
 - Fully responsive design (Mobile, Tablet, Desktop)
